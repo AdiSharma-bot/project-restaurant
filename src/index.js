@@ -11,6 +11,7 @@ import createMenuPage from "./assets/menu-page.js";
   contentDiv.innerHTML = "";
   contentDiv.appendChild(element)
 }
+// trivial change to force deploy
 
 function activePageLoad() {
   const contactBtn = document.querySelector(".contact-btn");
