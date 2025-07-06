@@ -4,6 +4,7 @@
   "description": "A webpage for a restaurant website",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
