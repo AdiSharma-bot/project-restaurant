@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Improve typography defaults */
+html {
+  font-size: 16px; /* Ensures consistency */
+  font-family: sans-serif; /* Use a clean default font */
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure images and videos scale properly */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent text selection where unnecessary (optional) */
+button,
+a {
+  user-select: none;
+}
+
+/* Improve focus visibility for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #7989a9; /* Matches  grid line color */
+  outline-offset: 2px;
+}
+
+/* Home page styling */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url(project-images/VaderDelights.jpg) #c5d9db;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+/* Header and nav styling */
+
+header {
+  width: 23%;
+  height: 13%;
+  position: absolute;
+  bottom: 5%;
+  left: 38%;
+  border-radius: 25px;
+  background: rgba(42, 76, 84, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(224, 247, 250, 0.28);
+  transform: translate(4%, -30%);
+  z-index: 1;
+  transition: all 200ms ease-in;
+  
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  height: 100%;
+}
+button.nav-btns {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  transition: all 300ms ease-in-out;
+  border: none;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.8);
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+span {
+  display: contents;
+}
+button img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  object-position: center;
+}
+img.menu-icon {
+  height: 5.5rem;
+}
+div#content {
+  height: 100%;
+  position: relative;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Home Page Styling */
+
+section.home-page {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  position: relative;
+  /* display: none; */
+}
+
+img.sith-icon {
+  position: absolute;
+  height: 6rem;
+  top: 5%;
+  transform: translateX(-50%);
+}
+p.home-heading {
+  color: #34495e;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+p.delights-content {
+  color: #1c2025;
+  text-align: center;
+  width: 40%;
+  line-height: 1.2;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Contact Section Styling*/
+
+section.contact-page {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* display: none; */
+}
+form {
+  display: contents;
+}
+fieldset.contact-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 87%;
+  width: 45%;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  transform: translateX(15%);
+  background: rgba(42, 76, 84, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(224, 247, 250, 0.28);
+  border-bottom: none;
+}
+legend {
+  position: absolute;
+  top: 1%;
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 12%;
+  font-family: "Raleway", sans-serif;
+  color: #34495e;
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  letter-spacing: 4px;
+}
+div.cancel-btn-container {
+  width: 100%;
+  height: 1%;
+  position: relative;
+}
+.cancel-btn-container button {
+  width: 100%;
+  height: 10%;
+  &:focus {
+    outline: none;
+  }
+}
+.cancel-btn-container button > img {
+  height: 2.5rem;
+  object-fit: contain;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  transition: all 300ms ease-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+div.name-mail-section {
+  margin-top: 4rem;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label[for="name"],
+label[for="email"] {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: #1c2025;
+  font-family: "Raleway", sans-serif;
+  font-weight: 550;
+  padding-left: 1.7rem;
+  padding-top: 0.5rem;
+}
+input#name,
+input#email {
+  border: 2px solid black;
+  height: 3rem;
+  width: 85%;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+}
+input:focus {
+  font-size: 1.5rem;
+}
+label[for="message"] {
+  width: 80%;
+  height: 37%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: #1c2025;
+  font-family: "Raleway", sans-serif;
+  font-weight: 550;
+}
+textarea {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 1.3rem;
+}
+div.form-buttons {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 3rem;
+}
+button[type="submit"] {
+  width: 33%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: rgba(42, 76, 84, 0.75);
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 300ms ease-in-out;
+}
+button[type="reset"] {
+  border: 2px solid black;
+  width: 20%;
+  height: 90%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 300ms ease-in-out;
+}
+.form-buttons button:hover {
+  transform: scale(1.1);
+}
+.form-buttons button:active {
+  transform: scale(0.8);
+}
+.form-buttons button:focus {
+  outline: none;
+}
+
+/*About page styling */
+
+section.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 87%;
+  width: 45%;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  transform: translateX(15%);
+  background: rgba(42, 76, 84, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(224, 247, 250, 0.28);
+  border-bottom: none;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  /* display: none; */
+}
+.about-page h3 {
+  position: absolute;
+  top: 5%;
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 12%;
+  font-family: "Raleway", sans-serif;
+  color: #34495e;
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  letter-spacing: 4px;
+}
+div.about-image-container {
+  display: contents;
+}
+div.about-image-container img {
+  object-fit: cover;
+  width: 30rem;
+  height: 25%;
+  /* border: 1px solid black; */
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+p.vader-info {
+  width: 80%;
+  font-family: "Raleway", sans-serif;
+  color: #1c2025;
+  font: 1rem;
+  text-align: center;
+}
+button.about-btn-cancel img {
+  top: 2.5rem;
+}
+
+/*  menu page styling */
+
+section.menu-page {
+  display: flex;
+  flex-direction: column;
+  height: 87%;
+  width: 45%;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  transform: translateX(15%);
+  background: rgba(42, 76, 84, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(224, 247, 250, 0.28);
+  border-bottom: none;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  padding-top: 1.5rem;
+  overflow: scroll;
+  /* display: none; */
+}
+h3.menu-heading {
+  position: absolute;
+  top: 2%;
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 12%;
+  font-family: "Raleway", sans-serif;
+  color: #34495e;
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  letter-spacing: 4px;
+  transform: translateX(10rem);
+}
+div.recipes-container {
+  overflow: auto;
+  margin-top: 7rem;
+  height: 50rem;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 10px;
+  padding: 1.5rem;
+}
+div.recipees {
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    backdrop-filter: blur(1px);
+    box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+      inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+  }
+}
+.recipe-1 {
+  grid-row: 1/span 2;
+  
+}
+
+.recipe-2 {
+  grid-row: span 5;
+}
+
+.recipe-4 {
+  grid-row: span 3;
+}
+
+.recipe-5 {
+  grid-row: span 2;
+}
+.recipe-6 {
+  grid-row: span 2;
+}
+.recipe-7 {
+  grid-row: span 2;
+}
+.recipe-9 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.recipe-1 img,
+.recipe-5 img,
+.recipe-6 img,
+.recipe-7 img {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.recipe-2 img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
+  height: 35%;
+  object-fit: cover;
+}
+p.dish-name {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: 'Raleway', sans-serif;
+  color: #34495e;
+}
+p.dish-desc {
+  text-align: center;
+  margin-top: 0.5rem;
+  color:#1c2025;
+  padding: 0 0.5rem;
+}
+.recipe-4 img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+.recipe-9 img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
